@@ -18,13 +18,40 @@ public class ClockDisplay
     private NumberDisplay minutes;
     private String displayString;    // simulates the actual display
     
+    
+    /*
+     * Answers to extra chapter questions:
+     * 
+     * Question 27:
+     *  The clock starts at 00:00 because it auto-defaults the values to 0 when there is not values that were inputed.
+     * 
+     * Question 29:
+     *  You will need to press it 60 times since it only advances by a single minute.
+     *  You can directly input the time by using "setTime()".
+     * 
+     * Question 30: 
+     * 
+     *    private Rectangle window = new Rectangle(4, 5);
+     * 
+     * Question 31:
+     *  The second constructor is used to create a new clock display that has set pre-determined time inputed before its creation.
+     * 
+     * Question 33:
+     * 
+     *    p1.print("filename",true);
+     *    
+     *    p2.print("filename",false);
+     *    
+     *    int status = p1.getStatus(3);
+     */
+    
     /**
      * Constructor for ClockDisplay objects. This constructor 
      * creates a new clock set at 00:00.
      */
     public ClockDisplay()
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
         updateDisplay();
     }
@@ -36,7 +63,7 @@ public class ClockDisplay
      */
     public ClockDisplay(int hour, int minute)
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
     }
